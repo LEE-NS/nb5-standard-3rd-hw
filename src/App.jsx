@@ -23,11 +23,11 @@ function App() {
 
   const minAgeHandler = (e) => {
     if (e.target.value < 0) {
-      alert("나이는 0 이하로 입력할 수 없습니다.")
+      alert("나이는 0 미만으로 입력할 수 없습니다.")
       e.target.value = ""
       return
     }
-    setMinAge(e.target.value || minAge)
+    setMinAge(e.target.value ?? minAge)
   }
 
   return (
